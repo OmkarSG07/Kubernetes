@@ -1,0 +1,53 @@
+ubuntu@ip-172-31-90-199:~/k8s-oneshot/nginx$ kubectl describe pod/nginx-pod -n nginx
+Name:             nginx-pod
+Namespace:        nginx
+Priority:         0
+Service Account:  default
+Node:             tws-kind-cluster-worker2/172.18.0.2
+Start Time:       Wed, 16 Jul 2025 11:24:36 +0000
+Labels:           <none>
+Annotations:      <none>
+Status:           Running
+IP:               10.244.2.4
+IPs:
+  IP:  10.244.2.4
+Containers:
+  nginx:
+    Container ID:   containerd://5ce19726f08f3a17805839d0a7a5ebc74ebb2ef6937d4d5d8f7c61e0672ca127
+    Image:          nginx:latest
+    Image ID:       docker.io/library/nginx@sha256:f5c017fb33c6db484545793ffb67db51cdd7daebee472104612f73a85063f889
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Wed, 16 Jul 2025 11:24:37 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-x5t4q (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True
+  Initialized                 True
+  Ready                       True
+  ContainersReady             True
+  PodScheduled                True
+Volumes:
+  kube-api-access-x5t4q:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  6m12s  default-scheduler  Successfully assigned nginx/nginx-pod to tws-kind-cluster-worker2
+  Normal  Pulling    6m11s  kubelet            Pulling image "nginx:latest"
+  Normal  Pulled     6m11s  kubelet            Successfully pulled image "nginx:latest" in 125ms (125ms including waiting). Image size: 72223778 bytes.
+  Normal  Created    6m11s  kubelet            Created container nginx
+  Normal  Started    6m11s  kubelet            Started container nginx
