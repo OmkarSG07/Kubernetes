@@ -1,5 +1,9 @@
 # Kubernetes
+
 Kubernetes practice 
+
+---
+
 # 🐳 Kubernetes Repository
 
 **A collection of hands‑on exercises, labs, and example manifests to learn and practice Kubernetes.**
@@ -12,34 +16,20 @@ This repository provides practical, guided examples to help users deploy, manage
 
 ---
 
-## 📚 Contents
-
-| Folder/File         | Description                                        |
-|---------------------|----------------------------------------------------|
-| `labs/`             | Step‑by‑step Kubernetes labs (Deployments, Pods, Services, etc.) |
-| `k8s/`              | Example YAMLs: Deployments, Services, ConfigMaps, Secrets |
-| `.github/workflows/`| GitHub Actions workflows for CI/CD with Kubernetes |
-| `charts/` (optional)| Helm charts for packaging your applications        |
-
----
-
 ## 🔧 Key Concepts Covered
 
 - Pod, Deployment, Service concepts  
-- Rolling updates & Canary deployments  
+- Rolling updates & scaling deployments  
 - Use of ConfigMaps and Secrets  
-- Horizontal and Vertical Pod Autoscalers (HPA/VPA)  
+- Persistent Volume (`PV`) & Persistent Volume Claim (`PVC`)  
 - RBAC and security best practices  
-- GitOps flows using GitHub Actions, Helm & Kustomize :contentReference[oaicite:1]{index=1}
 
 ---
 
 ## 🧾 Prerequisites
 
 Before starting:
-- Kubernetes cluster (Minikube, kind, GKE, EKS, etc.)  
-- `kubectl` installed and configured  
-- (Optional) Helm/Kustomize installed  
-- GitHub repository access (for workflows)
+- Kubernetes cluster (Minikube, KIND, GKE, EKS, etc.)  
+- `kubectl & Docker` installed and configured  
 
 ---
